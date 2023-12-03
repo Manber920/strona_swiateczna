@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Święta Bożego Narodzenia</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #d9534f;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+            background-color: #c7413c;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+            width: 80%;
+            text-align: left;
+        }
+
+        .article-container {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .article {
+            flex: 1;
+            padding: 20px;
+            margin: 10px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            background-color: #ffffff; /* Dodanie białego tła */
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            margin-top: 20px;
+            background-color: #d9534f;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+
+        #myModalWelcome {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .modal-content-welcome {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+        }
+
+        .close-welcome {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close-welcome:hover,
+        .close-welcome:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+		.wishes {
+            padding: 20px;
+            margin-top: 20px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            text-align: center;
+            background-color: white;
+            color: rgb(0, 0, 0); 
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var modalWelcome = document.getElementById("myModalWelcome");
+            var spanWelcome = document.getElementsByClassName("close-welcome")[0];
+
+            function showWelcomeModal() {
+                modalWelcome.style.display = "block";
+            }
+
+            showWelcomeModal();
+
+            spanWelcome.onclick = function () {
+                modalWelcome.style.display = "none";
+            };
+
+            window.onclick = function (event) {
+                if (event.target == modalWelcome) {
+                    modalWelcome.style.display = "none";
+                }
+            };
+        });
+    </script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Święta Bożego Narodzenia</h1>
+        <nav>
+            <a href="https://www.facebook.com/M4nber/" target="_blank">Facebook</a>
+            <a href="https://www.instagram.com/mily.on.cam/" target="_blank">Instagram</a>
+            <a href="https://www.youtube.com/@Manber9/featured" target="_blank">Youtube</a>
+            <a href="kontakt_swieta.html" target="_blank">Kontakt</a>
+        </nav>
+    </header>
+    <div id="myModalWelcome" class="modal">
+        <div class="modal-content-welcome">
+            <span class="close-welcome">&times;</span>
+            <center><img src="gifsw.gif" alt="Zdjęcie przywitania"/></center>
+        </div>
+    </div>
+    <div class="wishes">
+		<p>Drogi czytelniku!</p>
+        <p>Zbliżają się święta, a ja chciałbym złożyć Ci najserdeczniejsze życzenia pełne ciepła, miłości i radości. Niech nadchodzące Święta Bożego Narodzenia przyniosą Ci wiele niezapomnianych chwil w gronie najbliższych oraz mnóstwo spokoju i szczęścia.</p>
+
+        <p>W tym magicznym czasie, niech każda migocząca gwiazda na niebie przyniesie Ci nadzieję na lepsze jutro, a każda błyszcząca ozdoba na choince niech przypomina Ci o pięknie chwil spędzonych z bliskimi. Niech śnieg za oknem oblepia świat baśniowym puchem, tworząc atmosferę ciepła i spokoju.</p>
+
+        <p>Życzę Ci także, aby każde dzwonienie dzwonka przyniosło radość i uśmiech na Twoją twarz oraz aby dźwięki kolęd, które rozbrzmiewają wokół, dodawały uroku tym świętom. Niech aromat wigilijnych potraw roznosi się po domu, pobudzając apetyt i wprowadzając w świąteczny nastrój.</p>
+
+        <p>W tym wyjątkowym okresie roku, niech znajdziesz czas na zatrzymanie się i docenienie najważniejszych wartości – miłości, rodziny i przyjaźni. Niech Święta Bożego Narodzenia staną się dla Ciebie momentem refleksji nad minionym rokiem, z podziękowaniem za doświadczenia, radości i nauki, jakie przyniósł.</p>
+
+        <p>Niech nadchodzący Nowy Rok będzie czasem nowych możliwości, spełnienia marzeń oraz osiągnięcia osobistych celów. Życzę Ci zdrowia, siły i wytrwałości w dążeniu do swoich celów oraz wielu sukcesów na ścieżce życiowej.</p>
+
+        <p>Niech te życzenia świąteczne będą dla Ciebie jak magiczna gwiazda przewodnia, prowadząca Cię przez kolejne dni i tygodnie, pełne nadziei, radości i spełnienia marzeń.</p>
+
+        <p>Z najserdeczniejszymi życzeniami,</p>
+		<p>Autor strony</p>
+     </div>
+    <div class="article-container">
+        <div class="article">
+            <h3>Kolędy</h3>
+            <p>Tutaj znajdziesz nasze ulubione koledy</p>
+            <a href="koledy_strona.html" target="_blank">Czytaj więcej</a>
+        </div>
+
+        <div class="article">
+            <h3>Galeria</h3>
+            <p>Zobacz nasze zdjęcia</p>
+            <a href="swieta_galeria_strona.html" target="_blank">Zobacz galerię!</a>
+        </div>
+
+        <div class="article">
+            <h3>Przepisy</h3>
+            <p>Przepisy na pyszne potrawy...</p>
+            <a href="przepisy_strona.html" target="_blank">Czytaj więcej</a>
+        </div>
+
+        <div class="article">
+            <h3>Gry</h3>
+            <p>Zagraj w nasze gry!</p>
+            <a href="swieta_gry_strona.html" target="_blank">Zagraj!</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Święta Bożego Narodzenia</p>
+    </footer>
+
+</body>
+
+</html>

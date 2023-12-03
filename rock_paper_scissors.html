@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kamień Papier Nożyce</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1 id="result">Wybierz: Kamień, Papier lub Nożyce</h1>
+  <button onclick="play('rock')">Kamień</button>
+  <button onclick="play('paper')">Papier</button>
+  <button onclick="play('scissors')">Nożyce</button>
+
+  <script>
+    function play(playerChoice) {
+      const choices = ['rock', 'paper', 'scissors'];
+      const computerChoice = choices[Math.floor(Math.random() * 3)];
+
+      if (playerChoice === computerChoice) {
+        document.getElementById('result').innerText = 'Remis!';
+      } else if (
+        (playerChoice === 'rock' && computerChoice === 'scissors') ||
+        (playerChoice === 'paper' && computerChoice === 'rock') ||
+        (playerChoice === 'scissors' && computerChoice === 'paper')
+      ) {
+        document.getElementById('result').innerText = 'Wygrałeś!';
+      } else {
+        document.getElementById('result').innerText = 'Przegrałeś!';
+      }
+    }
+  </script>
+</body>
+</html>

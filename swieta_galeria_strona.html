@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nasza galeria</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #d9534f;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-top: 20px;
+        }
+
+        nav {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        nav a {
+            margin: 0 10px;
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .gallery-item {
+            width: 300px;
+            margin: 15px;
+            overflow: hidden;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        footer {
+            background-color: #d9534f;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-left: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Galeria zdjęć</h1>
+        <nav>
+            <a>Panie Mikołajki</a>
+            <a>Panie Elfki</a>
+            <a>Panie Reniferki</a>
+        </nav>
+    </header>
+
+    <section>
+        <!-- Dodaj swoje zdjęcia poniżej -->
+        <div class="gallery-item">
+            <img src="pm1.jpg" alt="Description 1">
+        </div>
+        <div class="gallery-item">
+            <img src="pm2.jpg" alt="Description 2">
+        </div>
+        <div class="gallery-item">
+            <img src="pm3.jpg" alt="Description 3">
+        </div>
+        <div class="gallery-item">
+            <img src="pm4.jpg" alt="Description 1">
+        </div>
+        <div class="gallery-item">
+            <img src="pe1.jpg" alt="Description 2">
+        </div>
+        <div class="gallery-item">
+            <img src="pe2.jpg" alt="Description 3">
+        </div>
+        <div class="gallery-item">
+            <img src="pe3.jpg" alt="Description 1">
+        </div>
+        <div class="gallery-item">
+            <img src="pe4.jpg" alt="Description 2">
+        </div>
+        <div class="gallery-item">
+            <img src="pr1.jpg" alt="Description 3">
+        </div>
+        <div class="gallery-item">
+            <img src="pr2.jpg" alt="Description 3">
+        </div>
+        <div class="gallery-item">
+            <img src="pr3.jpg" alt="Description 3">
+        </div>
+        <div class="gallery-item">
+            <img src="pr4.jpg" alt="Description 3">
+        </div>
+        <!-- Kontynuuj dodawanie kolejnych zdjęć -->
+
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Galeria</p>
+    </footer>
+
+</body>
+
+</html>
