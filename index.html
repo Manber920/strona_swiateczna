@@ -1,1 +1,70 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Życzenia Wielkanocne</title>
+    <style>
+        body {
+            background-image: url('wielkanoc.jpg');
+            background-size: cover;
+            background-position: center;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+        }
+	h1 {
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+    <h1>Życzenia Wielkanocne</h1>
+    <form id="greetingsForm">
+        <label for="nameInput">Podaj imię:</label>
+        <input type="text" id="nameInput" required>
+        <button type="submit">Wyślij</button>
+    </form>
+    <div id="greetingsOutput"></div>
+
+    <script>
+        const form = document.getElementById("greetingsForm");
+        const nameInput = document.getElementById("nameInput");
+        const greetingsOutput = document.getElementById("greetingsOutput");
+
+        form.addEventListener("submit", (e) => {
+            e.preventDefault();
+            const name = nameInput.value.trim();
+
+            // Wyświetlenie życzeń z uwzględnieniem imienia i płci
+            const greetings = getEasterGreetings(name);
+            greetingsOutput.innerHTML = `<p>${greetings}</p>`;
+        });
+
+        // Funkcja zwracająca życzenia wielkanocne
+        function getEasterGreetings(name) {
+            // Sprawdzenie, czy imię jest żeńskie czy męskie
+            const isFemaleName = checkIfFemaleName(name);
+
+            // Wybór odpowiedniego wyrazu poprzedzającego imię
+            let title;
+            if (name.toLowerCase() === "kuba") {
+                title = "Pan";
+            } else {
+                title = isFemaleName ? "Pani" : "Pan";
+            }
+
+            // W tym przykładzie zwracam ogólne życzenia
+            return `Wesołych Świąt, ${title} ${name}! Życzę Ci radosnego czasu z rodziną i pysznych jajek! 🌸🐣`;
+        }
+
+        // Funkcja sprawdzająca, czy imię jest żeńskie
+        function checkIfFemaleName(name) {
+            // Tutaj możesz dodać swoje reguły lub listę żeńskich imion
+            // Na przykład: return name.endsWith("a");
+            // W tym przykładzie zakładam, że imiona kończące się na "a" są żeńskie
+            return name.endsWith("a");
+        }
+    </script>
+</body>
+</html>
 
